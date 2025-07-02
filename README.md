@@ -121,7 +121,3 @@ node index.js
 ```bash
 Server is running on port 3000
 ```
-
-```
-
-```

@@ -10,11 +10,13 @@ const captainRoutes = require("./routes/captain.routes");
 const mapsRoutes = require("./routes/maps.routes");
 const rideRoutes = require("./routes/ride.routes");
 
+const allowedOrigins = "https://vroom45.vercel.app";
+
 connectToDB();
 
 app.use(
   cors({
-    origin: `${process.env.FRONTEND_URL}`,
+    origin: `${allowedOrigins}`,
     credentials: true,
   })
 );

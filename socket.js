@@ -2,14 +2,12 @@ const socketIO = require("socket.io");
 const userModel = require("./models/user.models");
 const captainModel = require("./models/captain.model");
 
-const allowedOrigins = "https://vroom45.vercel.app";
-
 let io;
 
 function initializeSocket(server) {
   io = socketIO(server, {
     cors: {
-      origin: `${allowedOrigins}`,
+      origin: "https://vroom45.vercel.app",
       methods: ["GET", "POST"],
     },
   });
